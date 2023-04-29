@@ -71,8 +71,8 @@ const keyboardKeys = [
       keyCode: 8,
       сlassName: 'keyboard__key_special',
       symbol: {
-        ru: { main: 'Backspace' },
-        en: { main: 'Backspace' },
+        ru: { main: 'Backspace', shift: 'Backspace' },
+        en: { main: 'Backspace', shift: 'Backspace' },
       },
     },
   ],
@@ -83,8 +83,8 @@ const keyboardKeys = [
       сlassName: 'keyboard__key_special',
       width: '49px',
       symbol: {
-        ru: { main: 'tab' },
-        en: { main: 'tab' },
+        ru: { main: 'tab', shift: 'tab' },
+        en: { main: 'tab', shift: 'tab' },
       },
     },
     {
@@ -157,8 +157,8 @@ const keyboardKeys = [
       keyCode: 220,
       сlassName: 'keyboard__key_special',
       symbol: {
-        ru: { main: 'del' },
-        en: { main: 'del' },
+        ru: { main: 'del', shift: 'del' },
+        en: { main: 'del', shift: 'del' },
       },
     },
   ],
@@ -169,8 +169,8 @@ const keyboardKeys = [
       сlassName: 'keyboard__key_special',
       width: '98px',
       symbol: {
-        ru: { main: 'caps lock' },
-        en: { main: 'caps lock' },
+        ru: { main: 'caps lock', shift: 'caps lock' },
+        en: { main: 'caps lock', shift: 'caps lock' },
       },
     },
     {
@@ -235,8 +235,8 @@ const keyboardKeys = [
       сlassName: 'keyboard__key_special',
       width: '90px',
       symbol: {
-        ru: { main: 'enter' },
-        en: { main: 'enter' },
+        ru: { main: 'enter', shift: 'enter' },
+        en: { main: 'enter', shift: 'enter' },
       },
     },
   ],
@@ -248,8 +248,8 @@ const keyboardKeys = [
       width: '98px',
       location: 1,
       symbol: {
-        ru: { main: 'shift' },
-        en: { main: 'shift' },
+        ru: { main: 'shift', shift: 'shift' },
+        en: { main: 'shift', shift: 'shift' },
       },
     },
     {
@@ -306,8 +306,8 @@ const keyboardKeys = [
       keyCode: 38,
       сlassName: 'keyboard__key_special',
       symbol: {
-        ru: { main: '▲' },
-        en: { main: '▲' },
+        ru: { main: '▲', shift: '▲' },
+        en: { main: '▲', shift: '▲' },
       },
     },
     {
@@ -317,8 +317,8 @@ const keyboardKeys = [
       width: '90px',
       location: 2,
       symbol: {
-        ru: { main: 'shift' },
-        en: { main: 'shift' },
+        ru: { main: 'shift', shift: 'shift' },
+        en: { main: 'shift', shift: 'shift' },
       },
     },
   ],
@@ -329,8 +329,8 @@ const keyboardKeys = [
       сlassName: 'keyboard__key_special',
       location: 1,
       symbol: {
-        ru: { main: 'ctrl' },
-        en: { main: 'ctrl' },
+        ru: { main: 'ctrl', shift: 'ctrl' },
+        en: { main: 'ctrl', shift: 'ctrl' },
       },
     },
     {
@@ -339,8 +339,8 @@ const keyboardKeys = [
       сlassName: 'keyboard__key_special',
       location: 1,
       symbol: {
-        ru: { main: 'alt' },
-        en: { main: 'alt' },
+        ru: { main: 'alt', shift: 'alt' },
+        en: { main: 'alt', shift: 'alt' },
       },
     },
     {
@@ -348,8 +348,8 @@ const keyboardKeys = [
       keyCode: 18,
       сlassName: 'keyboard__key_special',
       symbol: {
-        ru: { main: 'win' },
-        en: { main: 'win' },
+        ru: { main: 'win', shift: 'win' },
+        en: { main: 'win', shift: 'win' },
       },
     },
     {
@@ -357,8 +357,8 @@ const keyboardKeys = [
       keyCode: 32,
       width: '334px',
       symbol: {
-        ru: { main: ' ' },
-        en: { main: ' ' },
+        ru: { main: ' ', shift: ' ' },
+        en: { main: ' ', shift: ' ' },
       },
     },
     {
@@ -367,8 +367,8 @@ const keyboardKeys = [
       сlassName: 'keyboard__key_special',
       location: 2,
       symbol: {
-        ru: { main: 'alt' },
-        en: { main: 'alt' },
+        ru: { main: 'alt', shift: 'alt' },
+        en: { main: 'alt', shift: 'alt' },
       },
     },
     {
@@ -376,8 +376,8 @@ const keyboardKeys = [
       keyCode: 37,
       сlassName: 'keyboard__key_special',
       symbol: {
-        ru: { main: '◄' },
-        en: { main: '◄' },
+        ru: { main: '◄', shift: '◄' },
+        en: { main: '◄', shift: '◄' },
       },
     },
     {
@@ -385,8 +385,8 @@ const keyboardKeys = [
       keyCode: 40,
       сlassName: 'keyboard__key_special',
       symbol: {
-        ru: { main: '▼' },
-        en: { main: '▼' },
+        ru: { main: '▼', shift: '▼' },
+        en: { main: '▼', shift: '▼' },
       },
     },
     {
@@ -394,8 +394,8 @@ const keyboardKeys = [
       keyCode: 39,
       сlassName: 'keyboard__key_special',
       symbol: {
-        ru: { main: '►' },
-        en: { main: '►' },
+        ru: { main: '►', shift: '►' },
+        en: { main: '►', shift: '►' },
       },
     },
     {
@@ -404,8 +404,8 @@ const keyboardKeys = [
       сlassName: 'keyboard__key_special',
       location: 2,
       symbol: {
-        ru: { main: 'ctrl' },
-        en: { main: 'ctrl' },
+        ru: { main: 'ctrl', shift: 'ctrl' },
+        en: { main: 'ctrl', shift: 'ctrl' },
       },
     },
   ],
@@ -416,14 +416,17 @@ class RSSKeyword {
     this.keys = keys;
     this.lang = initinalLang;
     this.renderWrapper();
-    this.renderKeys();
+    this.renderKeys('main');
+    this.initLang();
 
     window.addEventListener('keydown', this.handleKeyDown.bind(this));
     window.addEventListener('keyup', this.handleKeyUp.bind(this));
 
     const wrapperKeys = document.querySelector('.keyboard-wrapper');
     const keyClick = (e) => {
-      this.print(e.target.getAttribute('data-keycode'));
+      if (e.target.getAttribute('data-keycode')) {
+        this.print(e.target.getAttribute('data-keycode'), e.shiftKey);
+      }
     };
     wrapperKeys.addEventListener('click', keyClick);
   }
@@ -440,6 +443,41 @@ class RSSKeyword {
     } else {
       selector[e.location - 1].classList.add('active');
     }
+
+    const addKey = (symbol) => {
+      e.preventDefault();
+      const inp = this.input;
+      inp.focus();
+
+      const start = inp.selectionStart;
+      const end = inp.selectionEnd;
+      inp.value =
+        inp.value.substring(0, start) +
+        symbol +
+        inp.value.substring(end, inp.value.length);
+
+      inp.selectionStart = start + 1;
+      inp.selectionEnd = start + 1;
+    };
+
+    switch (e.keyCode) {
+      case 38:
+        addKey('▲');
+        break;
+      case 37:
+        addKey('◄');
+        break;
+      case 40:
+        addKey('▼');
+        break;
+      case 39:
+        addKey('►');
+        break;
+      case 16:
+        this.renderKeys('shift');
+      default:
+        console.log();
+    }
   }
 
   handleKeyUp(e) {
@@ -452,6 +490,17 @@ class RSSKeyword {
     } else {
       selector[e.location - 1].classList.remove('active');
     }
+    switch (e.keyCode) {
+      case 16:
+        this.renderKeys('main');
+      default:
+        console.log();
+    }
+  }
+
+  initLang() {
+    let userLang = navigator.language || navigator.userLanguage;
+    console.log();
   }
 
   renderWrapper() {
@@ -475,17 +524,17 @@ class RSSKeyword {
     wrapperApp.appendChild(this.keyboardWrapper);
   }
 
-  renderKeys() {
+  renderKeys(symbol) {
+    this.keyboardWrapper.innerHTML = '';
     this.keys.forEach((arrRow) => {
       const keywordsRow = document.createElement('div');
       keywordsRow.className = 'keyboard__row';
-
       arrRow.forEach((item) => {
         const key = `<div class="keyboard__key ${
           item.сlassName ? item.сlassName : ''
         }" ${item.width ? `style="width: ${item?.width}"` : ''} data-keyCode=${
           item.keyCode
-        }>${item.symbol[this.lang].main}</div>`;
+        }>${item.symbol[this.lang][symbol]}</div>`;
         keywordsRow.innerHTML += key;
       });
 
@@ -493,7 +542,10 @@ class RSSKeyword {
     });
   }
 
-  print(code) {
+  print(code, shiftKey) {
+    if (shiftKey) {
+      shiftKey = 'shift';
+    } else shiftKey = 'main';
     let key;
     keyboardKeys.filter((item) => {
       const f = item.filter((i) => i.keyCode == code);
@@ -504,28 +556,47 @@ class RSSKeyword {
 
     [key] = key;
 
-    if (key.type == 'letter') {
-      this.input.focus();
-      this.input.value += key.symbol.ru.main;
+    if (key.type === 'letter') {
+      const inp = this.input;
+      inp.focus();
+
+      const start = inp.selectionStart;
+      const end = inp.selectionEnd;
+      inp.value =
+        inp.value.substring(0, start) +
+        key.symbol[this.lang][shiftKey] +
+        inp.value.substring(end, inp.value.length);
+      inp.selectionStart = start + 1;
+      inp.selectionEnd = start + 1;
     } else {
-      console.log(key);
       switch (key.keyCode) {
         case 13:
-          this.input.setRangeText('\n', this.input.selectionStart);
-          console.log(this.input.selectionStart);
-          //   this.input.value += '\n';
+          this.input.setRangeText('\n');
+          this.input.selectionStart += 1;
           this.input.focus();
           break;
         case 9:
-          this.input.value += '\t';
+          this.input.setRangeText('\t');
           this.input.focus();
           break;
+
         case 8:
-          this.input.value += '\t';
           this.input.focus();
+          const len = this.input.value.length;
+          const cursorPosition = this.input.selectionStart - 1;
+          if (this.input.selectionEnd < len) {
+            this.input.value =
+              this.input.value.slice(0, this.input.selectionEnd - 1) +
+              this.input.value.slice(this.input.selectionEnd, len);
+            this.input.setSelectionRange(cursorPosition, cursorPosition);
+            this.input.focus();
+          } else {
+            this.input.value = this.input.value.slice(0, len - 1);
+          }
+
           break;
         default:
-          console.log('default');
+          console.log();
       }
     }
   }
