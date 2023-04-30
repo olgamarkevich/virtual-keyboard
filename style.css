@@ -42,6 +42,7 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 5px;
+  position: relative;
 }
 
 .keyboard__key {
@@ -58,12 +59,29 @@ body {
   padding: 0 10px;
 }
 
+.keyboard__key span {
+  display: none;
+}
+
+.keyboard__key span:first-child {
+  display: inline;
+}
+
+.keyboard-wrapper.shift .keyboard__key span:first-child {
+  display: none;
+}
+
+.keyboard-wrapper.shift .keyboard__key span:last-child {
+  display: inline;
+}
+
 .keyboard__key:hover {
   background: #79aa89;
 }
 
 .keyboard__key_special {
   background: #222222;
+  font-size: 12px;
 }
 
 .keyboard__row:not(:last-child) {
@@ -72,4 +90,25 @@ body {
 
 .keyboard__key.active {
   background: #23be55;
+}
+
+.oc__title {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.keyboard__key[data-keycode='40'],
+.keyboard__key[data-keycode='38'] {
+  height: 19px;
+  position: absolute;
+  right: 45px;
+  font-size: 10px;
+}
+
+.keyboard__key[data-keycode='40'] {
+  top: 22px;
+}
+
+.keyboard__key[data-keycode='37'] {
+  margin-right: 45px;
 }
