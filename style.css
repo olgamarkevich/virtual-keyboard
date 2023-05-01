@@ -89,7 +89,8 @@ body {
   margin-bottom: 6px;
 }
 
-.keyboard__key.active {
+.keyboard__key.active,
+.keyboard__key.active_toggle {
   background: #23be55;
 }
 

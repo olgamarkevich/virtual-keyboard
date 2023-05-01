@@ -432,7 +432,6 @@ class RSSKeyword {
     const wrapperKeys = document.querySelector('.keyboard-wrapper');
 
     const keyClick = (e) => {
-      console.log(e.target.closest('.keyboard__key[data-keycode]'));
       if (e.target.closest('.keyboard__key[data-keycode]')) {
         this.print(
           e.target
@@ -452,6 +451,22 @@ class RSSKeyword {
         this.shift = true;
         this.keyboardWrapper.classList.add('shift');
       }
+      if (
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .getAttribute('data-keycode') === '20'
+      ) {
+        console.log('нажат шифт');
+        if (this.shift) {
+          this.shift = false;
+        } else this.shift = true;
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .classList.toggle('active_toggle');
+        // this.shift = true;
+        this.keyboardWrapper.classList.toggle('shift');
+      }
+
       if (
         e.target
           .closest('.keyboard__key[data-keycode]')
@@ -498,10 +513,10 @@ class RSSKeyword {
       inp.focus();
       const start = inp.selectionStart;
       const end = inp.selectionEnd;
-      inp.value =
-        inp.value.substring(0, start) +
-        symbol2 +
-        inp.value.substring(end, inp.value.length);
+
+      const st1 = inp.value.substring(0, start);
+
+      inp.value = st1 + symbol2 + inp.value.substring(end, inp.value.length);
 
       inp.selectionStart = start + 1;
       inp.selectionEnd = start + 1;
@@ -526,6 +541,7 @@ class RSSKeyword {
         break;
       case 20:
         e.preventDefault();
+        this.keyboardWrapper.classList.add('shift');
         // ADD CAPS LOGIC HERE
         break;
       case 18:
@@ -694,10 +710,10 @@ class RSSKeyword {
   deleteSymbol() {
     const len = this.input.value.length;
     const cursorPosition = this.input.selectionStart - 1;
+    const st1 = this.input.value.slice(0, this.input.selectionEnd - 1);
+    const st2 = this.input.value.slice(this.input.selectionEnd, len);
     if (this.input.selectionEnd < len) {
-      this.input.value =
-        this.input.value.slice(0, this.input.selectionEnd - 1) +
-        this.input.value.slice(this.input.selectionEnd, len);
+      this.input.value = st1 + st2;
       this.input.setSelectionRange(cursorPosition, cursorPosition);
       this.input.focus();
     } else {
@@ -710,10 +726,8 @@ class RSSKeyword {
     inp.focus();
     const start = inp.selectionStart;
     const end = inp.selectionEnd;
-    inp.value =
-      inp.value.substring(0, start) +
-      symbol +
-      inp.value.substring(end, inp.value.length);
+    const st1 = inp.value.substring(0, start);
+    inp.value = st1 + symbol + inp.value.substring(end, inp.value.length);
     inp.selectionStart = start + 1;
     inp.selectionEnd = start + 1;
   }
