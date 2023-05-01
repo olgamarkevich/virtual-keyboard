@@ -445,7 +445,10 @@ class RSSKeyword {
 
     wrapperKeys.addEventListener('mousedown', (e) => {
       const att = e.target.closest('.keyboard__key[data-keycode]');
-      if (att != null && att === '16') {
+      if (att != null && att.getAttribute('data-keycode') === '16') {
+        document
+          .querySelector('.keyboard__key[data-keycode="20"]')
+          .classList.remove('active_toggle');
         this.shift = true;
         this.keyboardWrapper.classList.add('shift');
       }
