@@ -432,7 +432,8 @@ class RSSKeyword {
     const wrapperKeys = document.querySelector('.keyboard-wrapper');
 
     const keyClick = (e) => {
-      if (e.target.closest('.keyboard__key[data-keycode]')) {
+      const attribute = e.target.closest('.keyboard__key[data-keycode]');
+      if (attribute != null && attribute) {
         this.print(
           e.target
             .closest('.keyboard__key[data-keycode]')
@@ -443,35 +444,21 @@ class RSSKeyword {
     };
 
     wrapperKeys.addEventListener('mousedown', (e) => {
-      if (
-        e.target
-          .closest('.keyboard__key[data-keycode]')
-          .getAttribute('data-keycode') === '16'
-      ) {
+      const att = e.target.closest('.keyboard__key[data-keycode]');
+      if (att != null && att === '16') {
         this.shift = true;
         this.keyboardWrapper.classList.add('shift');
       }
-      if (
-        e.target
-          .closest('.keyboard__key[data-keycode]')
-          .getAttribute('data-keycode') === '20'
-      ) {
-        console.log('нажат шифт');
-        if (this.shift) {
-          this.shift = false;
-        } else this.shift = true;
+      if (att != null && att.getAttribute('data-keycode') === '20') {
         e.target
           .closest('.keyboard__key[data-keycode]')
           .classList.toggle('active_toggle');
-        // this.shift = true;
+
+        this.shift = !this.shift;
         this.keyboardWrapper.classList.toggle('shift');
       }
 
-      if (
-        e.target
-          .closest('.keyboard__key[data-keycode]')
-          .getAttribute('data-keycode')
-      ) {
+      if (att != null && att.getAttribute('data-keycode')) {
         e.target
           .closest('.keyboard__key[data-keycode]')
           .classList.add('active');
@@ -479,19 +466,13 @@ class RSSKeyword {
     });
 
     wrapperKeys.addEventListener('mouseup', (e) => {
-      if (
-        e.target
-          .closest('.keyboard__key[data-keycode]')
-          .getAttribute('data-keycode') === '16'
-      ) {
+      const att = e.target.closest('.keyboard__key[data-keycode]');
+      if (att != null && att.getAttribute('data-keycode') === '16') {
         this.shift = false;
         this.keyboardWrapper.classList.remove('shift');
       }
-      if (
-        e.target
-          .closest('.keyboard__key[data-keycode]')
-          .getAttribute('data-keycode')
-      ) {
+
+      if (att != null && att.getAttribute('data-keycode')) {
         e.target
           .closest('.keyboard__key[data-keycode]')
           .classList.remove('active');
@@ -541,8 +522,8 @@ class RSSKeyword {
         break;
       case 20:
         e.preventDefault();
+        this.shift = true;
         this.keyboardWrapper.classList.add('shift');
-        // ADD CAPS LOGIC HERE
         break;
       case 18:
         if (e.ctrlKey) {
@@ -576,6 +557,11 @@ class RSSKeyword {
 
     switch (e.keyCode) {
       case 16:
+        e.preventDefault();
+        this.shift = false;
+        this.keyboardWrapper.classList.remove('shift');
+        break;
+      case 20:
         e.preventDefault();
         this.shift = false;
         this.keyboardWrapper.classList.remove('shift');
