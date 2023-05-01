@@ -432,28 +432,54 @@ class RSSKeyword {
     const wrapperKeys = document.querySelector('.keyboard-wrapper');
 
     const keyClick = (e) => {
-      if (e.target.getAttribute('data-keycode')) {
-        this.print(e.target.getAttribute('data-keycode'), e.shiftKey);
+      console.log(e.target.closest('.keyboard__key[data-keycode]'));
+      if (e.target.closest('.keyboard__key[data-keycode]')) {
+        this.print(
+          e.target
+            .closest('.keyboard__key[data-keycode]')
+            .getAttribute('data-keycode'),
+          e.shiftKey,
+        );
       }
     };
 
     wrapperKeys.addEventListener('mousedown', (e) => {
-      if (e.target.getAttribute('data-keycode') === '16') {
+      if (
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .getAttribute('data-keycode') === '16'
+      ) {
         this.shift = true;
         this.keyboardWrapper.classList.add('shift');
       }
-      if (e.target.getAttribute('data-keycode')) {
-        e.target.classList.add('active');
+      if (
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .getAttribute('data-keycode')
+      ) {
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .classList.add('active');
       }
     });
 
     wrapperKeys.addEventListener('mouseup', (e) => {
-      if (e.target.getAttribute('data-keycode') === '16') {
+      if (
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .getAttribute('data-keycode') === '16'
+      ) {
         this.shift = false;
         this.keyboardWrapper.classList.remove('shift');
       }
-      if (e.target.getAttribute('data-keycode')) {
-        e.target.classList.remove('active');
+      if (
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .getAttribute('data-keycode')
+      ) {
+        e.target
+          .closest('.keyboard__key[data-keycode]')
+          .classList.remove('active');
       }
     });
 
@@ -657,21 +683,25 @@ class RSSKeyword {
           break;
         case 8:
           this.input.focus();
-          const len = this.input.value.length;
-          const cursorPosition = this.input.selectionStart - 1;
-          if (this.input.selectionEnd < len) {
-            this.input.value =
-              this.input.value.slice(0, this.input.selectionEnd - 1) +
-              this.input.value.slice(this.input.selectionEnd, len);
-            this.input.setSelectionRange(cursorPosition, cursorPosition);
-            this.input.focus();
-          } else {
-            this.input.value = this.input.value.slice(0, len - 1);
-          }
+          this.deleteSymbol();
           break;
         default:
           break;
       }
+    }
+  }
+
+  deleteSymbol() {
+    const len = this.input.value.length;
+    const cursorPosition = this.input.selectionStart - 1;
+    if (this.input.selectionEnd < len) {
+      this.input.value =
+        this.input.value.slice(0, this.input.selectionEnd - 1) +
+        this.input.value.slice(this.input.selectionEnd, len);
+      this.input.setSelectionRange(cursorPosition, cursorPosition);
+      this.input.focus();
+    } else {
+      this.input.value = this.input.value.slice(0, len - 1);
     }
   }
 

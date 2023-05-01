@@ -54,17 +54,18 @@ body {
   height: 40px;
   min-width: 40px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
 }
 
 .keyboard__key span {
   display: none;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .keyboard__key span:first-child {
-  display: inline;
+  display: flex;
 }
 
 .keyboard-wrapper.shift .keyboard__key span:first-child {
@@ -72,7 +73,7 @@ body {
 }
 
 .keyboard-wrapper.shift .keyboard__key span:last-child {
-  display: inline;
+  display: flex;
 }
 
 .keyboard__key:hover {
