@@ -590,7 +590,7 @@ class RSSKeyword {
   initLang() {
     const userLang = navigator.language;
     if (localStorage.getItem('lang') !== null) {
-      this.initinalLang = localStorage.getItem('lang');
+      this.initinalLang = localStorage.getItem('lang').substr(0, 2);
     } else {
       localStorage.setItem('lang', userLang.substr(0, 2));
     }
@@ -646,6 +646,7 @@ class RSSKeyword {
     this.keys.forEach((arrRow) => {
       const keywordsRow = document.createElement('div');
       keywordsRow.className = 'keyboard__row';
+
       arrRow.forEach((item) => {
         const key = `<div class="keyboard__key ${
           item.сlassName ? item.сlassName : ''
