@@ -722,4 +722,5 @@ class RSSKeyword {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 const keyboard = new RSSKeyword(keyboardKeys, 'ru');
