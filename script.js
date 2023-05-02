@@ -590,8 +590,9 @@ class RSSKeyword {
   initLang() {
     const userLang = navigator.language;
     if (localStorage.getItem('lang') !== null) {
-      this.initinalLang = localStorage.getItem('lang').substr(0, 2);
+      this.initinalLang = localStorage.getItem('lang');
     } else {
+      this.initinalLang = userLang.substr(0, 2);
       localStorage.setItem('lang', userLang.substr(0, 2));
     }
   }
