@@ -1,5 +1,5 @@
 # Virtual Keyboard
-This project is an educational project designed to showcase web development skills. It represents a virtual keyboard implemented using pure JavaScript with SCSS for styling.
+This project is an educational project designed to showcase web development skills. It represents a virtual keyboard implemented using pure JavaScript with CSS for styling.
 
 Deployed project: [https://olgamarkevich.github.io/virtual-keyboard/](https://olgamarkevich.github.io/virtual-keyboard/)
 
