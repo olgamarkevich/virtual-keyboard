@@ -14,7 +14,6 @@ Deployed project: [https://olgamarkevich.github.io/virtual-keyboard/](https://ol
 
 * Proficiency in JavaScript for creating interactive elements on web pages.
 * Use of the DOM API for manipulating elements and handling events.
-* Learning and applying the SCSS CSS preprocessor to create styles using variables, nesting, and mixins.
 * Understanding fundamental principles of web development, such as code modularization and support for reusability.
 * Ability to work with the Git version control system and host projects on GitHub.
 
